@@ -1,0 +1,42 @@
+/*sytle is used on popup.html*/
+
+body {
+    width: 400px;
+    height: 400px;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover h1 {
+    color: orange;
+}
+
+.folgenContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.folgenManager {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+}
+
+.filler {
+    background-color: red;
+}
