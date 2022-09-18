@@ -27,7 +27,7 @@
 
 | Marker      | Description |
 | ----------- | ----------- |
-| <div style="width: 20px; height: 20px; background-color: red;"></div>     | filler episodes       |
+| <span style="color: red;">red</span>    | filler episodes       |
 
 <br>
 
