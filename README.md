@@ -27,7 +27,7 @@
 
 | Marker      | Description |
 | ----------- | ----------- |
-| <span style="color: red;">red</span>    | filler episodes       |
+| 🔴    | filler episodes       |
 
 <br>
 
