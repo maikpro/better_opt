@@ -1,29 +1,36 @@
 {
-    "name": "Better OPT",
-    "description": "Better OPT is a Onepiece-tube.com (OPT) extension for episode managing.",
-    "version": "1.0",
-    "author": "Maik Proba",
-    "manifest_version": 3,
-    "icons": { 
-        "16": "16x16.png",
-        "48": "48x48.png",
-       "128": "128x128.png" 
-    },
-    "permissions": [
-        "storage", 
-        "tabs", 
-        "activeTab", 
-        "scripting",
-        "unlimitedStorage"
-    ],
-    "action": {
-        "default_popup": "popup.html"
-    },
-    "content_scripts": [
-        {
-            "matches": ["*://onepiece-tube.com/*"],
-            "run_at": "document_idle",
-            "js": ["js/jquery-3.6.0.min.js","js/optStorageManager.js", "js/optObserver.js", "js/optScript.js"]
-        }
-    ]
+  "name": "Better OPT",
+  "description": "Better OPT is a Onepiece-tube.com (OPT) extension for episode managing.",
+  "version": "1.0",
+  "author": "Maik Proba",
+  "manifest_version": 3,
+  "icons": {
+    "16": "16x16.png",
+    "48": "48x48.png",
+    "128": "128x128.png"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting",
+    "unlimitedStorage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://onepiece-tube.com/*"],
+      "run_at": "document_idle",
+      "js": [
+        "js/jquery-3.6.0.min.js",
+        "js/optStorageManager.js",
+        "js/optObserver.js",
+        "js/optDesign.js",
+        "js/popup.js",
+        "js/optScript.js"
+      ]
+    }
+  ]
 }

@@ -1,22 +1,22 @@
 // script is used on onepiece-tube.com
-$(document).ready(function() {
-    //saveAndGetTest();
+$(document).ready(function () {
+  //saveAndGetTest();
 
-    main();
-    
+  main();
 });
 
+async function saveAndGetTest() {
+  const optStorageManager = new OPTStorageManager();
+  optStorageManager.save('maik', 'proba');
+  const maik = await optStorageManager.get('maik');
+  console.log(maik);
+}
 
-async function saveAndGetTest(){
-    const optStorageManager = new OPTStorageManager();
-    optStorageManager.save("maik", "proba");
-    const maik = await optStorageManager.get("maik");
-    console.log(maik);
-} 
+async function main() {
+  const optObserver = new OPTObserver('folge');
+  optObserver.setCurrentFolge();
 
-async function main(){
-    const optObserver = new OPTObserver("folge");
-    optObserver.setCurrentFolge();
+  optObserver.setFolgenlist();
 
-    optObserver.setFolgenlist();
+  await OPTDesign.getSelectedDesign();
 }

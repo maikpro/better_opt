@@ -1,64 +1,84 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Fontawesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">    <link rel="stylesheet" href="./css/style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>OPT</title>
-</head>
-<body> 
-
+  </head>
+  <body>
     <header>
-        <!--Navbar-->
+      <!--Navbar-->
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2">
-            <a class="navbar-brand" href="/popup.html">OPT</a>
-          </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2">
+        <a class="navbar-brand" href="/popup.html">
+          <img src="./128x128.png" alt="opt icon" />
+          OPT
+        </a>
+      </nav>
 
-        <!--Navbar-->
+      <!--Navbar-->
     </header>
 
     <!-- Content -->
     <main class="container">
-        <div class="folgenContainer">
+      <div class="folgenContainer">
+        <div class="folgenManager">
+          <!--previous-->
+          <a id="previousFolgeLink" target="_blank">
+            <i class="fa-solid fa-arrow-left"></i>
+          </a>
 
-          <div class="folgenManager">
-            <!--previous-->
-            <a id="previousFolgeLink" target="_blank">
-              <i class="fa-solid fa-arrow-left"></i>
-            </a> 
+          <!--current-->
+          <a id="currentFolgeLink" target="_blank">
+            <h1 id="currentFolge">Loading currentFolge...</h1>
+          </a>
 
-            <!--current-->
-            <a id="currentFolgeLink" target="_blank">
-              <h1 id="currentFolge">Loading currentFolge...</h1>
-            </a> 
-
-            <!--next-->
-            <a id="nextFolgeLink" target="_blank">
-              <i class="fa-solid fa-arrow-right"></i>
-            </a> 
-          </div>
-          
-          
-          <select id="folgenList" class="form-select mt-3" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-          </select>
-
-          <button id="reload" type="button" class="btn btn-primary mt-3"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+          <!--next-->
+          <a id="nextFolgeLink" target="_blank">
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
-        
-        
-        
+
+        <select
+          id="folgenList"
+          class="form-select mt-3"
+          aria-label="Default select example"
+        >
+          <option selected>Open this select menu</option>
+        </select>
+
+        <button id="reload" type="button" class="btn btn-primary mt-3">
+          <i class="fa-solid fa-arrow-rotate-right"></i>
+        </button>
+      </div>
+
+      <div class="designContainer">
+        <button id="design">Change Design</button>
+      </div>
     </main>
     <!-- Content -->
 
     <!--embedded js-->
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/optStorageManager.js"></script>
+    <script src="./js/optDesign.js"></script>
     <script src="./js/popup.js"></script>
-</body>
+  </body>
 </html>
