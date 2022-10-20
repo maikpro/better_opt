@@ -52,7 +52,7 @@ async function displayFolgenList() {
     .map((folge) => {
       //markiere Fillerfolgen
       if (folge.isFiller) {
-        return `<option class=filler value=${folge.nr}>${folge.nr} - ${folge.name}</option>`;
+        return `<option class=filler value=${folge.nr}>!! ${folge.nr} - ${folge.name}</option>`;
       }
 
       return `<option value=${folge.nr}>${folge.nr} - ${folge.name}</option>`;
@@ -80,7 +80,7 @@ async function updateFolgenlistFromServer() {
     .map((folge) => {
       //markiere Fillerfolgen
       if (folge.isFiller) {
-        return `<option class=filler value=${folge.nr}>${folge.nr} - ${folge.name}</option>`;
+        return `<option class=filler value=${folge.nr}>🔴 ${folge.nr} - ${folge.name}</option>`;
       }
 
       return `<option value=${folge.nr}>${folge.nr} - ${folge.name}</option>`;
